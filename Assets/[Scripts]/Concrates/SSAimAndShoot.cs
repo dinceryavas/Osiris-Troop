@@ -15,10 +15,22 @@ public class SSAimAndShoot : MonoBehaviour,ISSAimAndShoot
         ship = _ship;
         fireRate = fireRateStart;
     }
-    public void Shoot()
+    public void Shoot(int upgradecount)
     {
         if(canShoot)
         {
+            if (upgradecount == 0)
+            {
+                fireRateStart = 0.2f;
+            }
+            else if (upgradecount == 1)
+            {
+                fireRateStart = 0.1f;
+            }
+            else if (upgradecount == 2)
+            {
+                fireRateStart = 0.05f;
+            }
             GameInUIManager.instance.crossHair.SetActive(true);
             if(fireRate<0)
             {

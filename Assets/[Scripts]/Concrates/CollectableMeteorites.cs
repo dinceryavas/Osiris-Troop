@@ -19,23 +19,11 @@ public class CollectableMeteorites : MonoBehaviour
     }
     void Update()
     {
-        if (moveToMagnet)
+        if (moveToMagnet&& !onetime)
         {
-            Vector3 diff = magnet.position - transform.position;
-            diff.y = 0f;
-            rb.velocity += diff.normalized * speed;
-            if (timer < 0)
-            {
-                moveToMagnet = false;
-                if(!onetime)
-                {
-                    rb.velocity = Vector3.zero;
-                    transform.DOMove(bag.bagMouth.position, 0.1f);
-                    Debug.Log("fsa");
-                }
-            }
-            else
-                timer -= Time.fixedDeltaTime;
+            rb.velocity = Vector3.zero;
+
+            transform.DOMove(bag.bagMouth.position, 0.1f);
         }
         else
         {
@@ -54,9 +42,9 @@ public class CollectableMeteorites : MonoBehaviour
         BagMouth BM = other.GetComponent<BagMouth>();
         if(BM!=null)
         {
-            bag.storage.Storage();
-            bag.storage.StorageMoney(collectMoneyCount);
+            MoneyManager.instance.StorageMoney(collectMoneyCount);
             gameObject.SetActive(false);
+            transform.hideFlags = HideFlags.HideInHierarchy;
         }
     }
 }

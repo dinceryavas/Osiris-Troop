@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface ISSAimAndShoot
 {
-    void Shoot();
+    void Shoot(int firerate);
 }

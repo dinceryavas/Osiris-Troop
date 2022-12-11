@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21d773a85464284fa111bd01b664ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectMoneyCount: 0
+  collectMoneyCount: 25
   speed: 0.5
 --- !u!33 &2371537422171538706
 MeshFilter:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoneyManager : MonoBehaviour
 {
     public int moneyAmouth;
+    public int storageMoney;
     #region Singleton
     public static MoneyManager instance = null;
     private void Awake()
@@ -15,13 +16,16 @@ public class MoneyManager : MonoBehaviour
         }
     }
     #endregion
-    private void Start()
+    private void Update()
     {
         GameInUIManager.instance.moneyText.text = moneyAmouth.ToString();
     }
     public void Addmoney(int addmoney)
     {
         moneyAmouth += addmoney;
-        GameInUIManager.instance.moneyText.text = moneyAmouth.ToString();
+    }
+    public void StorageMoney(int _storeageMoney)
+    {
+        storageMoney += _storeageMoney;
     }
 }

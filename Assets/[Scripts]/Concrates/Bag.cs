@@ -5,9 +5,14 @@ using UnityEngine;
 public class Bag : MonoBehaviour
 {
     public Transform bagMouth;
-    [HideInInspector] public ISSStorage storage;
-    private void Start()
+    #region Singleton
+    public static Bag instance = null;
+    private void Awake()
     {
-        storage = new SSStorage();
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
+    #endregion
 }
