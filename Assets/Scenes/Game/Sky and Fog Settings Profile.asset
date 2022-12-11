@@ -58,14 +58,14 @@ MonoBehaviour:
     min: 0
     max: 360
   skyIntensityMode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
   exposure:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 5
   multiplier:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 1464.78
     min: 0
   upperHemisphereLuxValue:
     m_OverrideState: 1
@@ -75,8 +75,8 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {x: 0.17051925, y: 0.37420282, z: 0.5}
   desiredLuxValue:
-    m_OverrideState: 0
-    m_Value: 20000
+    m_OverrideState: 1
+    m_Value: 10
   updateMode:
     m_OverrideState: 1
     m_Value: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
     max: 360
   scrollSpeed:
     m_OverrideState: 0
-    m_Value: 2
+    m_Value: 0.65
     min: 0
   enableBackplate:
     m_OverrideState: 0
