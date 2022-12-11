@@ -37,6 +37,10 @@ public class CollectableMeteorites : MonoBehaviour
             else
                 timer -= Time.fixedDeltaTime;
         }
+        else
+        {
+            transform.Rotate(3, 2, 2);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {

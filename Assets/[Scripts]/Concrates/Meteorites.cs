@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Meteorites : MonoBehaviour
 {
+    public Transform[] spawnposes;
     public float meteoritePower;
     public int meteoriteMoneyCount;
 
